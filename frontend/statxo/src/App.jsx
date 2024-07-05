@@ -17,16 +17,16 @@ const App = () => {
       <Navbar />
       {/* <Login /> */}
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route
+        {/* <Route path="/" element={<Login />} /> */}
+        {/* <Route
           path="/home"
           element={
             <ProtectedRoute>
               <HomePage />
            </ProtectedRoute>
           }
-        />
-        <Route path="/signup" element={<Signup />} />
+        /> */}
+        {/* <Route path="/signup" element={<Signup />} /> */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
