@@ -36,7 +36,8 @@ const DataTable = () => {
   const [userdata, setUserData] = useState("");
   const toast = useToast();
 
-  const userlocal = JSON.parse(localStorage.getItem('user'));
+  const userlocal = localStorage.getItem('user');
+  console.log(userlocal);
 
   useEffect(() => {
     const getData = async () => {
@@ -153,8 +154,8 @@ const DataTable = () => {
         </Thead>
         <Tbody>
           {userdata && userdata.map((item, index) => (
-            <Tr key={item.id}>
-              <Td>{item.id}</Td>
+            <Tr key={item._id}>
+              <Td>{item._id}</Td>
               <Td>{item.quantity}</Td>
               <Td>
                 <Input
@@ -201,14 +202,9 @@ const DataTable = () => {
                 )}
               </Td>
               <Td>{item.impact}</Td>
-              <Td>
-              <Button>Edit</Button>
-              </Td>
-           
+              <Td><Button>Edit</Button></Td>
             </Tr>
           ))}
-
-
         </Tbody>
       </Table>
       <Button onClick={handleSave} colorScheme="teal" mt={4}>
