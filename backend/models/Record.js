@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 
+
 const RecordSchema = new mongoose.Schema({
   quantity: {
     type: Number,
@@ -41,8 +42,8 @@ const RecordSchema = new mongoose.Schema({
   },
   impact: {
     type: String,
-    enum: ['Low', 'Mid', 'High'],
-    required: true
+    enum: ['Low', 'Mid', 'High']
+   
   }
 }, {
   timestamps: true

@@ -10,6 +10,7 @@ export const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
 
     const savedUser = localStorage.getItem('user');
+    console.log();
     return savedUser ? JSON.parse(savedUser) : null;
   });
 

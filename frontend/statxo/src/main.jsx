@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoot } from 'react-dom'; // Import createRoot instead of ReactDOM
+import { createRoot } from 'react-dom/client'; 
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';

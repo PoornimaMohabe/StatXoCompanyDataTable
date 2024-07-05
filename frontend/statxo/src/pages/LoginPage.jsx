@@ -7,11 +7,11 @@ import { UserContext } from '../contexts/UserContext';
 
 const LoginPage = () => {
   const { setUser } = useContext(UserContext);
-  const history = useNavigate();
+  const Navigate = useNavigate();
 
   const handleLogin = (role) => {
     setUser({ role });
-    history.push('/');
+    Navigate.push('/');
   };
 
   return (

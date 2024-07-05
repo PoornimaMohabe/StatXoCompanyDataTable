@@ -7,13 +7,13 @@ const { authMiddleware, adminMiddleware } = require('../middlewares/authMiddlewa
 const router = express.Router();
 
 //  protect routes
-router.use(authMiddleware);
+// router.use(authMiddleware);
 
 // fetch all records
 router.get('/records', getAllRecords);
 
 // add a new record
-router.post('/records', adminMiddleware, addRecord);
+router.post('/records', addRecord);
 
 
 // update records
